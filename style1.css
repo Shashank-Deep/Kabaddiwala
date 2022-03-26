@@ -1,0 +1,21 @@
+body {
+    background-color: #FF8080;
+}
+
+.first {
+    padding-top:100px;
+    padding-left: 400px;
+}
+
+.second {
+    padding-top:100px;
+}
+
+.third {
+    padding-top: 100px;
+    padding-left: 400px;
+}
+
+.fourth {
+    padding-top: 100px;
+}
