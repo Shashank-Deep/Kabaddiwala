@@ -15,7 +15,7 @@ h1 {
 }  
 
 #title {
-    background-color: #a0d18d
+    background-color: #6BCB77;
 }
 
 #footer {
@@ -32,4 +32,8 @@ h1 {
 
 #article h1 {
     padding-top: 20px;
+}
+
+.middle {
+    background-color: #91e76f;
 }
