@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
 import mysql.connector as sql
 fn=''
 ln=''
@@ -38,5 +40,31 @@ def orderaction(request):
         c="insert into users Values('{}','{}','{}','{}','{}','{}','{}','{}')".format(fn,ln,g,em,pn,it,qn,ad)
         cursor.execute(c)
         m.commit()
+        if request.method == "POST":
+            to = request.POST.get('email')
+        # content = request.POST.get('content')
+        #print(to,content)
+            send_mail(
+                'Order Conform',
+                'Your is placed successfully',
+                settings.EMAIL_HOST_USER,
+                [to]
+
+            )
+            return render(
+                request,
+                'order_page.html',
+                {
+                    'title': 'Send an email',
+                }
+            )
+        else:    
+            return render(
+                    request,
+                    'order_page.html',
+                    {
+                        'title': 'Send an email',
+                    }
+                )
 
     return render(request, 'order_page.html')    
