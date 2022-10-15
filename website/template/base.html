@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Scrapwala.com</title>
+     
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body>
+    <div id="title">
+        <header class="text-gray-600 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+               
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                  </svg>
+                <span class="ml-3 text-xl"><bold>Scrapwala</bold></span>
+              </a>
+              <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href="home1"class="mr-5 hover:text-gray-900">Home</a>
+                <a href="#about" class="mr-5 hover:text-gray-900">About</a>
+                <a href="sell" class="mr-5 hover:text-gray-900">Sell</a>
+                <a href="register" class="mr-5 hover:text-gray-900">Register</a>
+                <a href="contact" class="mr-5 hover:text-gray-900">Contact Us</a>
+              </nav>
+             
+            </div>
+          </header>
+    </div>
+
+    {% block body %} {% endblock body %}
+
+  </body>
+</html>   

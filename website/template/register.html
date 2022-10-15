@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+            .container1{
+                padding: 20px;
+                background-color: #6BCB77;
+                text-align: center;
+            }
+            h1 { 
+                display: block;
+                font-size: 2em;
+                text-align: center;
+                font-weight: bold;
+                background-color: #4CAF50;
+            }
+    </style>
+    
+</head>
+
+<body>
+    <div id="title">
+        <header class="text-gray-600 body-font">
+            <div class="container1 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                  </svg>
+                <span class="ml-3 text-xl"><bold>Scrapwala.com</bold></span>
+              </a>
+              <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href="home1"class="mr-5 hover:text-gray-900">Home</a>
+                <a href="#about" class="mr-5 hover:text-gray-900">About</a>
+                <a href="sell" class="mr-5 hover:text-gray-900">Sell</a>
+                <a href="register" class = "mr-5 hover:text-gray-900">Register </a>
+                <a href="contact" class="mr-5 hover:text-gray-900">Contact Us</a>
+              </nav>
+              
+            </div>
+          </header>
+    </div>
+    <h1>Registration</h1>
+
+
+    
+
+<div class="flex justify-center items-center h-screen w-full bg-white-400">
+    <div class="w-1/2 bg-white rounded shadow-2xl p-8 m-4">
+        <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">Register</h1>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            {% load static %}
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" >First Name</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="first_name" id="first_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="last_name">Last Name</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="email">Email</label>
+                <input class="border py-2 px-3 text-grey-800" type="email" name="email" id="email">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="last_name">Enter Paper Rate</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="page_rate" id="paper">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="last_name">Enter Glass Rate</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="glass_rate" id="glass">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="last_name">Enter Metal Rate</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="metal_rate" id="metal">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="last_name">Phone Number</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="phone_no" id="phone">
+            </div>
+            
+            <button class="block bg-teal-400 hover:bg-teal-600 text-white uppercase text-lg mx-auto p-4 rounded" type="submit">Create Account</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
