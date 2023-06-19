@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
+from django.core.mail import EmailMessage
+
 import mysql.connector as sql
 fn=''
 ln=''
@@ -43,6 +45,8 @@ def orderaction(request):
         c="insert into users Values('{}','{}','{}','{}','{}','{}','{}','{}')".format(fn,ln,g,em,pn,it,qn,ad)
         cursor.execute(c)
         m.commit()
+        if cursor.rowcount > 0:
+            print("Data inserted successfully.")
         if request.method == "POST":
             to = request.POST.get('email')
             fno = request.POST['first_name']
@@ -96,12 +100,15 @@ def contact(request):
         email = request.POST['email']
         message = request.POST['message']
 
-        send_mail(
+        email = EmailMessage(
             'you Some one want Contact',
             'Name :-' + name +' Email :-' + email + ' Message :-' + message,
-            email,
-            ['shashankdeep.647@gmail.com'],
+            settings.EMAIL_HOST_USER,
+            ['shashankdeep.647@gmail.com']
         )
+
+        email.fail_silently = True
+        email.send()
 
         return render(request, 'contact.html')
     else:
@@ -136,4 +143,4 @@ def register(request):
         c="insert into register Values('{}','{}','{}','{}','{}','{}','{}')".format(fn,ln,em,pr,gr,mr,pn)
         cursor.execute(c)
         m.commit()
-    return render(request, 'register.html')             
+    return render(request, 'register.html')
