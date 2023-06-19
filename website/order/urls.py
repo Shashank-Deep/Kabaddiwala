@@ -1,8 +1,10 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from order import views
 
 urlpatterns = [
+    # path('admin/', admin.site.urls),
+    # path('', include('order.urls')),
     path("",views.home, name='demo'),
     path('sell',views.sell, name='sell'),
     path('register',views.register, name='register'),
@@ -12,4 +14,5 @@ urlpatterns = [
     path("contact", views.contact, name="contact"),
     path('order',views.orderaction, name ='order'),
     path('home1',views.home1, name='home1'),
+    
 ]
