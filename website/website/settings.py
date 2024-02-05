@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7sw=_61m2yu^l^n984a)_83=dv*x=j$$pm8@(g^-ynu+v_#+^u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,6 +81,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'CLIENT': {
+#             'host': 'your_connection_string',
+#             'username': 'your_username',
+#             'password': 'your_password',
+#             'authMechanism': 'SCRAM-SHA-1',
+#         }
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
